@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="estilo/style.css">
    <link rel="stylesheet" href="estilo/media-query.css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+   rel="stylesheet"> 
     <title>Tela de login</title>
 </head>
 <body>
@@ -17,18 +19,24 @@
                 <h1>Login</h1>
                 <p> Seja bem-vindo(a) novamente. Faça login para acessar sua conta 
                     e fazer configutração no sue ambiente.
-                    <form action="login.php" method="post">
+                    <form action="login.php" method="post" autocomplete="on">
                         <div class="campo">
-                       
+                            <span class="material-icons">person</span>
                             <input type="email" name="login" id="ilogin"
-                             placeholder="digite seu e-mail">
+                             placeholder="digite seu e-mail" autocomplete="email" required maxlength="30">
                              <label for="ilogin">Login</label>
                         </div>
                         <div class="campo">
-                          
-                            <input type="password" name="senha" id="isenha" placeholder="digite sua senha">
+                            <span class="material-icons">vpn_key</span>
+                            <input type="password" name="senha" id="isenha" 
+                            placeholder="digite sua senha" autocomplete="current-password" required minlength="5"
+                            maxlength="20">
                             <label for="isenha">Senha</label>
                         </div>
+                        <input type="submit" value="Entrar">
+                        <a href="esqueci.html">
+                            Esqueci a senha <i class="material-icons">mail</i>
+                        </a>
                     </form>
                 </p>
             </div>
